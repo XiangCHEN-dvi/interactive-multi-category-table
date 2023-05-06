@@ -1,6 +1,6 @@
 import os
 from dash import Dash, html, dcc, callback, Output, Input
-from utils import parse_json, gen_html_table, get_radioitems_options
+from .utils import parse_json, gen_html_table, get_radioitems_options
 
 def run_app(json_file_path):
     json_data, category_list, tag_list, category_dict = parse_json(json_file_path)

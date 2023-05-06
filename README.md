@@ -2,7 +2,7 @@
 
 In many different scenarios, contents are single-categorized and multi-tagged, by which I mean there are multiple tags but one single (though may be hierarchical) category system, e.g., file systems, blogs, etc. However, sometimes contents can be categorized from different category views. For storage or lookup, one category system is OK; but for visualization and analysis, flexibly organizing the contents with different category views will be very handy.
 
-This repo targets addressing such demand by creating interactive tables with alternative category views, from formatted json input, based on dash.
+This repo targets addressing such demand by creating interactive tables with alternative category views, from formatted json input, based on [dash](https://dash.plotly.com/).
 
 # usage
 

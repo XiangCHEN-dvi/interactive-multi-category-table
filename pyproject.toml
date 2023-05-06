@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "interactive_multi_category_table"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
-  { name="Xiang CHEN", email="xiangchen.ai@outlook.com" },
+    {name="Xiang CHEN", email="xiangchen.ai@outlook.com"},
 ]
-description = "A package to create interactive tables with alternative category views, from formatted json input, based on dash."
+description = "A python package to create interactive tables with alternative category views, from formatted json input, based on dash."
 
 readme = "README.md"
 requires-python = ">=3.7"
@@ -16,6 +16,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "dash",
 ]
 
 [project.urls]
