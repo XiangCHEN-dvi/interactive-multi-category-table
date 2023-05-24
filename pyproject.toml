@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "interactive_multi_category_table"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
     {name="Xiang CHEN", email="xiangchen.ai@outlook.com"},
 ]
