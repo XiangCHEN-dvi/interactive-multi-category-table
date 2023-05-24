@@ -24,22 +24,28 @@
         margin: 10px;
         padding: 10px;
     }
-    .table-header {
+    .td-header {
         text-align: center;
-        border: 1px solid;
+        padding: 8px;
         white-space: pre;
-        background: gray;
+        background: #313131;
         color: white;
     }
-    .table-content {
+    .td-content {
         text-align: left;
-        border: 1px solid;
+        padding: 8px;
         white-space: pre;
+    }
+    table tr:nth-child(even) {
+        background: #d1d1d1;
+    }
+    table tr:nth-child(odd) {
+        background: #f1f1f1;
     }
 </style>
 <script>
-    const category_list=__category_list__;
-    const tag_list=__tag_list__;
+    const category_list = __category_list__;
+    const tag_list = __tag_list__;
     const category_dict = __category_dict__;
     const contents = __contents__;
 
@@ -90,7 +96,7 @@
                         var td = document.createElement("td");
                         td.colSpan = depth_row_category;
                         td.rowSpan = depth_column_category;
-                        td.className = "table-header";
+                        td.className = "td-header";
                         tr.appendChild(td);
                     }
                 } else if (row<depth_column_category && column>=depth_row_category) {
@@ -108,7 +114,7 @@
                         var td = document.createElement("td");
                         td.colSpan = col_span;
                         td.rowSpan = (category_dict[radio_column_current][column-depth_row_category].length==row+1)?(depth_column_category-category_dict[radio_column_current][column-depth_row_category].length+1):1;
-                        td.className = "table-header";
+                        td.className = "td-header";
                         td.innerHTML = category_dict[radio_column_current][column-depth_row_category][row];
                         tr.appendChild(td);
                     }
@@ -127,13 +133,13 @@
                         var td = document.createElement("td");
                         td.colSpan = (category_dict[radio_row_current][row-depth_column_category].length==column+1)?(depth_row_category-category_dict[radio_row_current][row-depth_column_category].length+1):1;
                         td.rowSpan = row_span;
-                        td.className = "table-header";
+                        td.className = "td-header";
                         td.innerHTML = category_dict[radio_row_current][row-depth_column_category][column];
                         tr.appendChild(td);
                     }
                 } else if (row>=depth_column_category && column>=depth_row_category) {
                     var td = document.createElement("td");
-                    td.className = "table-content";
+                    td.className = "td-content";
                     td.innerHTML = td_arr[row-depth_column_category][column-depth_row_category];
                     tr.appendChild(td);
                 }
